@@ -1,0 +1,32 @@
+package kodlama.io.kodlama.io.Devs.business.mapper.programminglanguage;
+
+
+import org.mapstruct.Mapper;
+
+import kodlama.io.kodlama.io.Devs.business.requests.programminglanguage.CreateProgrammingLanguageRequest;
+import kodlama.io.kodlama.io.Devs.business.requests.programminglanguage.UpdateProgrammingLanguageRequest;
+import kodlama.io.kodlama.io.Devs.business.responses.programminglanguage.CreateProgrammingLanguageResponse;
+import kodlama.io.kodlama.io.Devs.business.responses.programminglanguage.DeleteProgrammingLanguageResponse;
+import kodlama.io.kodlama.io.Devs.business.responses.programminglanguage.GetAllProgrammingLanguagesResponse;
+import kodlama.io.kodlama.io.Devs.business.responses.programminglanguage.GetByIdProgrammingLanguageResponse;
+import kodlama.io.kodlama.io.Devs.business.responses.programminglanguage.UpdateProgrammingLanguageResponse;
+import kodlama.io.kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+
+@Mapper(componentModel = "spring")
+public interface ProgrammingLanguageMapper {
+	
+	ProgrammingLanguage createProgrammingLanguageRequestToProgrammingLanguage(CreateProgrammingLanguageRequest createProgrammingLanguageRequest);
+
+    ProgrammingLanguage updateProgrammingLanguageRequestToProgrammingLanguage(UpdateProgrammingLanguageRequest updateProgrammingLanguageRequest);
+
+    GetAllProgrammingLanguagesResponse programmingLanguageToGetAllProgrammingLanguagesResponse(ProgrammingLanguage programmingLanguage);
+
+    GetByIdProgrammingLanguageResponse programmingLanguageToGetByIdProgrammingLanguageResponse(ProgrammingLanguage programmingLanguage);
+
+    CreateProgrammingLanguageResponse programmingLanguageToCreateProgrammingLanguageResponse(ProgrammingLanguage programmingLanguage);
+
+    UpdateProgrammingLanguageResponse programmingLanguageToUpdateProgrammingLanguageResponse(ProgrammingLanguage programmingLanguage);
+
+    DeleteProgrammingLanguageResponse programmingLanguageToDeleteProgrammingLanguageResponse(ProgrammingLanguage programmingLanguage);
+}
